@@ -1,0 +1,27 @@
+@font-face {
+    font-family: 'Expo Arabic';
+    src: url('ExpoArabic-Medium.woff2') format('woff2'),
+        url('ExpoArabic-Medium.woff') format('woff');
+    font-weight: 500;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Expo Arabic';
+    src: url('ExpoArabic-SemiBold.woff2') format('woff2'),
+        url('ExpoArabic-SemiBold.woff') format('woff');
+    font-weight: 600;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Expo Arabic';
+    src: url('ExpoArabic-Light.woff2') format('woff2'),
+        url('ExpoArabic-Light.woff') format('woff');
+    font-weight: 300;
+    font-style: normal;
+    font-display: swap;
+}
+

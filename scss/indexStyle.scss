@@ -1,0 +1,439 @@
+$darkblue: #293F96;
+$lightgrey: #eeedef;
+$lightblue: #68B1E2;
+$darkgrey: #888888;
+$screen-xs: 767px;
+$screen-xss: 575px;
+@import url(//db.onlinewebfonts.com/c/3d5e354bc3072aaa6605b3c5a6c46f62?family=Expo+Arabic+Light);
+@font-face {
+  font-family: 'Expo Arabic';
+  src: url('../fonts/ExpoArabic-Medium.woff2') format('woff2'),
+  url('../fonts/ExpoArabic-Medium.woff') format('woff');
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+}
+body {
+  background-color: $lightgrey;
+  font-family: 'Expo Arabic';
+  header {
+    nav {
+      background-color: $lightgrey;
+      margin-left: 50px;
+      @media screen and (max-width: 992px) {
+        margin-left: 0;
+      }
+      .navbar-collapse {
+        border-top: 2px solid $darkblue;
+        margin-right: 15px;
+        margin-top: 15px;
+        text-align: center;
+        ul{
+          @media screen and (max-width: 992px) {
+            padding: 0;
+          }
+        }
+        .nav-link {
+          text-decoration: none;
+          color: $darkblue;
+          padding: 5px;
+          margin-top: 5px;
+          margin-right: 50px;
+          &:hover {
+            background-color: $darkblue;
+            color: $lightblue !important;
+            border-radius: 50px;
+            transition: .2s;
+          }
+          @media screen and (max-width: 992px) {
+            padding-right: 0;
+            margin-right: 0;
+          }
+        }
+        .active {
+          background-color: $darkblue;
+          color: $lightblue !important;
+          border-radius: 50px;
+        }
+      }
+      .navbar-brand {
+        img {
+          width: 70px;
+          height: auto;
+        }
+      }
+    }
+  }
+  .top-banner {
+    position: relative;
+    background-image: url(../images/top-banner-bacgorund.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 750px;
+    background-position: center;
+    @media screen and (max-width: $screen-xs) {
+      height: 450px;
+    }
+    @media screen and (max-width: $screen-xss) {
+      background-size: contain;
+      background-position: 30px;
+    }
+    p {
+      color: $darkblue;
+      font-size: 20px;
+      font-weight: 500;
+      line-height: 45px;
+      margin-top: 500px;
+      padding-top: 20px;
+      @media screen and (max-width: $screen-xs) {
+        font-size: 16px;
+        margin-top: 300px;
+      }
+    }
+    .download {
+      display: inline-block;
+      img {
+        width: 30px;
+      }
+    }
+    .comments {
+      position: fixed;
+      bottom: 30px;
+      right: 80px;
+      z-index: 2;
+      @media screen and (max-width: $screen-xs) {
+        bottom: 20px;
+        right: 20px;
+      }
+      img {
+        width: 75px;
+      }
+    }
+  }
+  .services {
+    @media screen and (max-width: $screen-xs) {
+      padding-top: 50px;
+    }
+    .container-fluid {
+      text-align: center;
+      h2 {
+        color: $lightblue;
+        font-size: 30px;
+        font-weight: bolder;
+        padding-bottom: 40px;
+        @media screen and (max-width: $screen-xs) {
+          padding-bottom: 0;
+          padding-top: 50px;
+        }
+      }
+      .col-md-4 {
+        padding: 30px 53px;
+        @media screen and (max-width: 991px){
+          padding: 30px 25px;
+        }
+        .wrapper {
+          padding: 0 10px;
+          h3 {
+            font-size: 25px;
+            color: $darkblue;
+            font-weight: bolder;
+          }
+          p {
+            font-size: 14px;
+            line-height: 18px;
+            font-weight: 600;
+            @media screen and (max-width: 991px) {
+              line-height: 22px;
+            }
+            @media screen and (max-width: $screen-xs) and (min-width: $screen-xss) {
+              padding: 0 100px;
+            }
+          }
+          img {
+            width: 25%;
+            padding: 20px 0;
+          }
+        }
+      }
+    }
+  }
+  .home-version-2s {
+    .container {
+      text-align: right;
+      padding: 100px 0;
+      @media screen and (max-width: $screen-xs) {
+        padding: 30px 0;
+      }
+      .col-lg-5 {
+        position: relative;
+        padding-right: 100px;
+        @media screen and (max-width: 1199px) and (min-width: 992px) {
+        padding-right: 50px;
+        }
+        @media screen and (max-width: 991px) {
+          padding-right: 0;
+        }
+        img {
+          width: 350px;
+          height: auto;
+          position: relative;
+          @media screen and (max-width: $screen-xs) {
+            width: 250px;
+          }
+        }
+        .my-class {
+          position: absolute;
+          top: 115px;
+          right: 100px;
+          left: 0;
+          margin: auto;
+          @media screen and (max-width: 1199px) and (min-width: 992px) {
+            right: 75px;
+          }
+          @media screen and (max-width: 992px) and (min-width: 768px) {
+            right: 75px;
+            padding-right: 0;
+          }
+          @media screen and (max-width: $screen-xs) {
+            right: 0px;
+            top: 80px;
+          }
+          h3 {
+            font-size: 45px;;
+            font-weight: bolder;
+            color: $darkblue;
+            @media screen and (max-width: $screen-xs) {
+              font-size: 32px;
+            }
+          }
+          p {
+            padding-top: 15px;
+            font-size: 20px;
+            padding-right: 40px;
+            @media screen and (max-width: $screen-xs) {
+              padding-top: 5px;
+              font-size: 14px;
+              padding-right: 0;
+            }
+          }
+        }
+      }
+      .col-lg-7 {
+        padding: 0 80px;
+        @media screen and (max-width: 991px) and (min-width: 768px) {
+        padding: 0 30px;
+        }
+        @media screen and (max-width: $screen-xs) {
+          padding: 80px 15px;
+        }
+        ul {
+          padding-top: 30px;
+          line-height: 35px;
+          h5 {
+            color: $lightblue;
+            font-size: 25px;
+            font-weight: bolder;
+          }
+          li {
+            color: $darkblue;
+            list-style-type: none;
+            font-size: 18px;
+            font-weight: 600;
+            padding: 5px 0;
+            margin-right: 25px;
+            position: relative;
+            @media screen and (max-width: 991px) and (min-width: 768px) {
+              font-size: 15px;
+            }
+            &:before {
+              content: url("../images/lipoints.png");
+              position: absolute;
+              display: block;
+              top: 5px;
+              right: -28px;
+            }
+          }
+        }
+      }
+    }
+  }
+  .faq {
+    padding-top: 50px;
+    h2 {
+      color: $lightblue;
+      font-size: 35px;
+      font-weight: bolder;
+      margin-bottom: 40px;
+      @media screen and (max-width: $screen-xs) {
+        margin-bottom: 0;
+      }
+    }
+    .col-md-4 {
+      padding: 30px 53px;
+      .wrapper {
+        padding: 0 10px;
+        h3 {
+          color: $darkblue;
+          font-weight: bolder;
+          font-size: 25px;
+          margin: 0;
+        }
+        p {
+          color: $darkblue;
+          font-size: 26px;
+          font-weight: bolder;
+          @media screen and (max-width: 991px) {
+            font-size: 18px;
+          }
+        }
+        img {
+          width: 40%;
+          padding: 5px 0;
+        }
+      }
+    }
+    .col-md-6 {
+      a {
+        text-decoration: none;
+        padding: 5px 10px;
+        border-radius: 50px;
+        font-weight: bolder;
+        font-size: 23px;
+      }
+      .btngrey {
+        margin-bottom: 35px;
+        color: $lightgrey;
+        background-color: $darkgrey;
+      }
+      .btnblue {
+        color: $lightblue;
+        background-color: $darkblue;
+      }
+      p:last-of-type {
+        padding: 10px 0;
+      }
+    }
+  }
+  .contact-us {
+    padding-bottom: 150px;
+    h2 {
+      color: $lightblue;
+      font-size: 40px;
+      font-weight: bolder;
+    }
+    @media screen and (max-width: $screen-xs) {
+      .col-md-6:nth-of-type(even) {
+        order: 1;
+      }
+    }
+    .wrapper {
+      overflow: hidden;
+      object-fit: cover;
+      width: 85%;
+      @media screen and (max-width: $screen-xs) {
+        padding-bottom: 50px;
+        width: 100%;
+      }
+      img {
+        width: 100%;
+      }
+    }
+    form {
+      input:nth-of-type(2) {
+        margin-bottom: 5px;
+      }
+      input, textarea {
+        text-align: right;
+        width: 100%;
+        padding: 10px;
+        border-radius: 5px;
+        border: 1px solid $darkblue;
+        background: transparent;
+        overflow: hidden;
+        &:focus {
+          outline: 0;
+          box-shadow: none;
+        }
+        &::placeholder {
+          color: $lightblue;
+          opacity: 0.5;
+        }
+      }
+      a {
+        float: right;
+        background-color: $darkblue;
+        color: $lightblue;
+        border-radius: 50px;
+        padding: 10px;
+        &:hover {
+          background-color: $darkblue;
+          color: $lightblue;
+        }
+      }
+    }
+    ul {
+      padding: 50px 0;
+      padding-bottom: 80px;
+      li {
+        display: inline-block;
+        list-style-type: none;
+        padding-right: 20px;
+        position: relative;
+        a {
+          text-decoration: none;
+          color: black;
+        }
+        span {
+          position: absolute;
+          top: 5px;
+          right: 0;
+        }
+      }
+    }
+  }
+  .my-carousel {
+    padding: 80px 0;
+    h2 {
+      color: $lightblue;
+      font-weight: bolder;
+    }
+    .carousel-wrap {
+      border-top: 20px solid #cbdce8;
+      border-bottom: 20px solid #cbdce8;
+      .owl-nav {
+        display: none;
+      }
+      .owl-dots {
+        display: none;
+      }
+    }
+  }
+}
+/*CSS Sprite Generator */
+.li-identification, .massage, .phone, .location {
+  display: inline-block;
+  background: url('../sprites/sprites-file.png') no-repeat;
+  overflow: hidden;
+  text-indent: -9999px;
+  text-align: left;
+}
+.li-identification {
+  background-position: -10px -0px;
+  width: 48px;
+  height: 48px;
+}
+.massage {
+  background-position: -10px -58px;
+  width: 15px;
+  height: 12px;
+}
+.phone {
+  background-position: -35px -58px;
+  width: 13px;
+  height: 13px;
+}
+.location {
+  background-position: -10px -80px;
+  width: 11px;
+  height: 14px;
+}
