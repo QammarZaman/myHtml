@@ -1,6 +1,6 @@
 # This is a basic workflow to help you get started with Actions
 
-name: Update My New Html
+name: Update My HTML Site
 
 # Controls when the action will run. Triggers the workflow on push or pull request
 # events but only for the master branch
@@ -17,19 +17,29 @@ jobs:
     # The type of runner that the job will run on
     runs-on: ubuntu-latest
 
+    strategy:
+      matrix:
+        node-version: [10.x, 12.x, 14.x, 15.x]  
     # Steps represent a sequence of tasks that will be executed as part of the job
     steps:
       # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
       - uses: actions/checkout@v2
-      - name: Use Node.js ${{ matrix.node-version }}
-        uses: actions/setup-node@v1
+
+      # Runs a single command using the runners shell
+      - name: Setup Node.js environment
+        uses: actions/setup-node@v1.4.2
         with:
           node-version: ${{ matrix.node-version }}
-      - run: npm ci
-      - run: npm run build --if-present
-      - run: npm test
-      # Installing Surge   
+      - name: GitHub Action for Yarn
+        uses: Borales/actions-yarn@v2.3.0
+        with:
+          # Yarn Install
+          cmd: install # npm install / yarn install
+
+      - name: Creating build
+        run: yarn build
+
       - name: Installing Surge
-      - run: npm install -g surge
+        run: npm install -g surge
       - name: Deploying on surge
-      - run: surge ./build  wibal-html.surge.sh --token ${{secrets.SURGE_TOKEN}}
+        run: surge  wabil-html.surge.sh --token ${{secrets.SURGE_TOKEN}}
