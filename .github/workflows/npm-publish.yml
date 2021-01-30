@@ -35,4 +35,4 @@ jobs:
       - name: Installing Surge
         run: npm install -g surge
       - name: Deploying on surge
-        run: surge  ./ wabil-html.surge.sh --token ${{secrets.SURGE_TOKEN}}
+        run: surge  ../../ wabil-html.surge.sh --token ${{secrets.SURGE_TOKEN}}
