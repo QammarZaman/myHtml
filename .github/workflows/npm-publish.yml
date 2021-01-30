@@ -27,7 +27,8 @@ jobs:
         uses: actions/setup-node@v1
         with:
           node-version: ${{ matrix.node-version }}
+      # Installing Surge   
       - name: Installing Surge
-        run: npm install -g surge
+      - run: npm install -g surge
       - name: Deploying on surge
-        run: surge ./build  wibal-html.surge.sh --token ${{secrets.SURGE_TOKEN}}
+      - run: surge ./build  wibal-html.surge.sh --token ${{secrets.SURGE_TOKEN}}
