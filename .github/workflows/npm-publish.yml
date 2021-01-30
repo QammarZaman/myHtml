@@ -24,9 +24,9 @@ jobs:
 
       # Runs a single command using the runners shell
       - name: Setup Node.js environment
-        uses: actions/setup-node@v1.4.2
+        uses: actions/setup-node@v1
         with:
-          version: 12
+          node-version: ${{ matrix.node-version }}
       - name: GitHub Action for Yarn
         uses: Borales/actions-yarn@v2.3.0
         with:
